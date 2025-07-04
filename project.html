@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Divya | My Projects</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1 data-aos="fade-down">My Projects</h1>
+
+        <header>
+            <div class="navbar">
+                <button data-filter="all">All</button>
+                <button data-filter="web">Web</button>
+                <button data-filter="python">Python</button>
+                <button data-filter="ai">AI</button>
+                <button data-filter="ml">ML/DL</button>
+                <button onclick="window.location.href='portfolio.html'">Back</button>
+            </div>
+        </header>
+
+        <div class="projects-container">
+            <div class="project-card" data-category="web">
+                <img src="foodie hub.png" alt="Foodie Hub">
+                <h3>Online Food Delivery - FOODIE HUB </h3>
+                <p>A online food ordering system built with HTML,CSS,Javasript,PHP and MySQL for seamless online ordering.</p>
+                <a href="https://github.com/divyasrijs/web_foodie_hub" target="_blank">View Project</a>
+            </div>
+            <div class="project-card" data-category="web">
+                <img src="life plus.png" alt="Life plus">
+                <h3>Pharmacy Management System - Life Plus Pharmacy</h3>
+                <p>A web-based Pharmacy Management System built using HTML, CSS, JavaScript, PHP, and MySQL. It allows users to manage inventory, sales, billing, and customer records efficiently through a dynamic dashboard.</p>
+                <a href="https://github.com/divyasrijs/web_life_plus" target="_blank">View Project</a>
+            </div>
+        </div>
+        <div class="projects-container">
+            <div class="project-card" data-category="ml">
+                <img src="liver cirrhosis.png" alt="Liver Cirrhosis">
+                <h3>Analysis on Liver Cirrhosis</h3>
+                <p>A machine learning-based project that analyzes patient health records to predict liver cirrhosis severity and survival. It utilizes data visualization and classification models to assist in early diagnosis and treatment planning.</p>
+                <a href="https://github.com/divyasrijs/liver_cirrhosis" target="_blank">View Project</a>
+            </div>
+            <div class="project-card" data-category="ml">
+                <img src="SER.png" alt="Speech Emoton Recognition">
+                <h3>Speech Emotion Detection</h3>
+                <p>A deep learning project that detects human emotions from speech using audio signal processing and classification models. It helps recognize emotional states like happy, sad, angry, or neutral by analyzing vocal tone and frequency features.</p>
+                <a href="https://github.com/divyasrijs/S_E_R" target="_blank">View Project</a>
+            </div>
+        </div>
+        <div class="projects-container">
+            <div class="project-card" data-category="ai">
+                <img src="text-to-text.png" alt="Text-to-Text">
+                <h3>Text-to-Text generator</h3>
+                <p>An AI-powered chatbot that generates intelligent text responses based on user queries. Built using NLP models and backend scripting for dynamic human-like interaction.</p>
+                <a href="https://github.com/divyasrijs/text-to-text" target="_blank">View Project</a>
+            </div>
+            <div class="project-card" data-category="ai">
+                <img src="text-to-speech.png" alt="Text-to-Speech">
+                <h3>Text-to-Speech generator</h3>
+                <p>A chatbot-based tool that converts user input into realistic speech using speech synthesis APIs or libraries. Ideal for enhancing accessibility and conversational interfaces.</p>
+                <a href="https://github.com/divyasrijs/text-to-speech" target="_blank">View Project</a>
+            </div>
+        </div>
+        <div class="projects-container">
+            <div class="project-card" data-category="ai">
+                <img src="fitness.png" alt="fitness">
+                <h3>Fitness Agent</h3>
+                <p>A virtual fitness assistant chatbot that provides personalized workout tips, routines, and health guidance. Developed using AI and backend logic to support users in achieving their fitness goals.</p>
+                <a href="https://github.com/divyasrijs/fitness_agent" target="_blank">View Project</a>
+            </div>
+            <div class="project-card" data-category="ai">
+                <img src="travel.png" alt="travel">
+                <h3>Travel Agent</h3>
+                <p>An intelligent travel assistant chatbot that helps users explore destinations, plan itineraries, and get travel tips. Built using conversational AI and backend logic to simulate real-time trip planning.</p>
+                <a href="https://github.com/divyasrijs/travel_agent" target="_blank">View Project</a>
+            </div>
+        </div>
+        <div class="projects-container">
+            <div class="project-card" data-category="ai">
+                <img src="recipe.png" alt="recipe">
+                <h3>Recipe generator</h3>
+                <p>A chatbot that generates personalized recipes based on user preferences or ingredients. Uses natural language processing to recommend meals, cooking steps, and dietary suggestions.</p>
+                <a href="https://github.com/divyasrijs/recipe_generator" target="_blank">View Project</a>
+            </div>
+            <div class="project-card" data-category="python">
+                <img src="ace.png" alt="Pharmacy">
+                <h3>Pharmacy Management Using Python</h3>
+                <p>A desktop-based Pharmacy Management System developed using Python and MySQL for efficient drug inventory, billing, and customer data management. It streamlines daily pharmacy operations through a simple and user-friendly interface.</p>
+                <a href="https://github.com/divyasrijs/python_pharmacy" target="_blank">View Project</a>
+            </div>
+        </div>
+
+    <script>
+        const buttons = document.querySelectorAll("button[data-filter]");
+        const cards = document.querySelectorAll(".project-card");
+        buttons.forEach(button => {
+            button.addEventListener("click", () => {
+            const filter = button.getAttribute("data-filter");
+            cards.forEach(card => {
+            const category = card.getAttribute("data-category");
+            if (filter === "all" || category === filter) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+            });
+            });
+        });
+    </script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    </body>
+</html>
